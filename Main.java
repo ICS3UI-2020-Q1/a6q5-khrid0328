@@ -31,13 +31,20 @@ public class Main {
 
     }
     
-    if(numbers[1] < numbers[0]){
-
-      System.out.println("Your numbers in ascending order are " + numbers[1] + " and " + numbers[0]);
+    if(numbers[0] > numbers[1]){
       
-    }else{
+      // create a temperary variable
+      int temp = numbers[0];
 
-      System.out.println("Your numbers in ascending order are " + numbers[0] + " and " + numbers[1]);
-    }    
+      // "switch" the two variables so numbers[1] is equal to numbers[0]
+      numbers[0] = numbers[1];
+
+      // "switch" the two variables so numbers[1] is equal to temp
+      numbers[1] = temp;
+
+    }
+
+    System.out.println("Your numbers in ascending order are " + numbers[0] + " and " + numbers[1]);
+
   }
 }
